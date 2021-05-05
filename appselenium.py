@@ -18,6 +18,10 @@ def doScraping(billerCode):
 
     print(driver.title)
     time.sleep(3)
+    longnamexp = '//*[@id="tab1"]/div/div/div[1]/div[1]/h3'
+    longname = driver.find_element_by_xpath(longnamexp)
+
+    print('longname={}'.format(longname.text))
 
     inputxp = '//*[@id="query"]'
     inputTB = driver.find_element_by_xpath(inputxp)
